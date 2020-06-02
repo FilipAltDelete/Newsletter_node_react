@@ -25,24 +25,11 @@ app.use((req, res, next) => {
   next();
 });
 
-//app.set("view-engine", "ejs");
-
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
-/*
-
-app.get("/AdminLogin", (req, res) => {
-  res.render("AdminSignIn.ejs");
-});
-app.post("/AdminLogin", (req, res) => {});
-app.get("/AdminPage", (req, res) => {
-  res.render("AdminPage.ejs", { name: "Kyle" });
-});
-*/
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

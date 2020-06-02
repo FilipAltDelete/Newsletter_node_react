@@ -40,7 +40,7 @@ router.post("/", function (req, res) {
       email.forEach((element) => {
         emails.push(element.email);
       });
-      console.log(emails);
+      //console.log(emails);
       let html = "";
       html += "<html>";
       html += "<body>";
