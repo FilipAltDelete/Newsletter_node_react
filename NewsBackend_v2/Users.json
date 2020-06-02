@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "username": "UserOne",
+    "password": "Password",
+    "email": "epost@epost.se",
+    "newsletter": false
+  },
+  {
+    "id": 2,
+    "username": "UserTwo",
+    "password": "Wordpass",
+    "email": "elektronsikt@postbrev.com",
+    "newsletter": false
+  },
+  {
+    "id": 3,
+    "username": "UserThree",
+    "password": "something",
+    "email": "asd@asd.com",
+    "newsletter": true
+  },
+  {
+    "id": 4,
+    "username": "UserFour",
+    "password": "Lösensord",
+    "email": "foo@bar.com",
+    "newsletter": true
+  },
+  {
+    "id": 5,
+    "username": "UserFive",
+    "password": "1234",
+    "email": "Email@something.com",
+    "newsletter": true
+  },
+  {
+    "id": 6,
+    "username": "a",
+    "password": "$2b$10$7IIxstBHMM4swTio.xTXz.BBwQhh.aUfZdYAwpmHNxVTUJGdx37pC",
+    "email": "a",
+    "newsletter": true
+  }
+]
