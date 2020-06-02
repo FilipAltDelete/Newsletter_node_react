@@ -8,15 +8,6 @@ app.use(express.json());
 
 app.post("/", function (request, response) {
   response.send(request.body);
-  /*
-  bcrypt.hash(request.body.user.password, salt, (err, encrypted) => {
-    request.body.user.password = encrypted;
-    console.log(encrypted);
-
-    
-    //next();
-  });
-  */
 
   var newUsername = request.body.user.username;
   var newPassword = request.body.user.password;

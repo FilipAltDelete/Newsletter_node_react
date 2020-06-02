@@ -37,13 +37,10 @@ export class Dashboard extends Component {
         console.log(response);
         window.location.reload(false);
       });
-    //this.props.registerNewUser(false);
-    //this.setState({ registerNewUser: false });
     event.preventDefault();
   }
 
   render() {
-    //var user = JSON.parse(localStorage.getItem("currentLoggedInUser"));
     var putNews;
 
     const handleNewsletter = () => {
@@ -52,14 +49,12 @@ export class Dashboard extends Component {
       } else {
         putNews = false;
       }
-      //console.log(this.props.newsletter)
       axios.put(
         "http://localhost:9000/UpdateUser/" + this.props.currentUserId,
         {
           userPut: {
             id: this.props.currentUserId,
             username: this.props.loggedInUsername,
-            //password: user.password,
             newsletter: putNews,
           },
         }
