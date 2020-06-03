@@ -1,44 +1,51 @@
 [
   {
     "id": 1,
-    "username": "UserOne",
-    "password": "Password",
-    "email": "epost@epost.se",
+    "username": "test",
+    "password": "$2b$10$YrQsIqLHVpBLPsVvIUoO7.6SAusRBBr0aUNwDTow4ZSdlhNq6YsU6",
+    "email": "test@test.com",
     "newsletter": false
   },
   {
     "id": 2,
-    "username": "UserTwo",
-    "password": "Wordpass",
-    "email": "elektronsikt@postbrev.com",
+    "username": "Filip",
+    "password": "$2b$10$7eh4ImfuTfZEuSoMg7wdhO72dOxAVeE6g/19E5Oi5N4URlkAnddpy",
+    "email": "filip@filip.com",
     "newsletter": false
   },
   {
     "id": 3,
-    "username": "UserThree",
-    "password": "something",
-    "email": "asd@asd.com",
+    "username": "Nils",
+    "password": "$2b$10$Eq1NivCOC/6agb0QuZkLX.45fBtN9C1bFEbr8AD3zkdD404HZ8Rsy",
+    "email": "nils@software.com",
     "newsletter": true
   },
   {
     "id": 4,
-    "username": "UserFour",
-    "password": "Lösensord",
-    "email": "foo@bar.com",
+    "username": "Petar",
+    "password": "$2b$10$YQYYPQDWpbUmh9W6sDCMU.hzd7Jib/9FREnAPC73I.NDtq59asi8W",
+    "email": "petar@markarydskommun.com",
     "newsletter": true
   },
   {
     "id": 5,
-    "username": "UserFive",
-    "password": "1234",
-    "email": "Email@something.com",
+    "username": "Janne",
+    "password": "$2b$10$7vbuecmZyZ3ToIwfpZjXouOk4YUOO7NaxXEUD69TiLaxprlUiOFda",
+    "email": "janne@hiveandfive.com",
     "newsletter": true
   },
   {
     "id": 6,
-    "username": "test",
-    "password": "$2b$10$JmUC6sB1JaiaJ.0UZOy7JeDO7YMmBQXFhjh2R5NO3ayjm2hAEW7/6",
-    "email": "test@test.com",
-    "newsletter": true
+    "username": "React",
+    "password": "$2b$10$VK2h67eAuiEE1WN70FXyOeCpZKIhWbk8frPLyByYtVndSjDI3B0Iy",
+    "email": "react@react.com",
+    "newsletter": false
+  },
+  {
+    "id": 7,
+    "username": "Node",
+    "password": "$2b$10$5vR0Lg7p6R2alPz6H2lAaekq523ECrNg6quqD4GirTddO/xPhHCV6",
+    "email": "node@node.com",
+    "newsletter": false
   }
 ]
