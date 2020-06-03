@@ -4,24 +4,22 @@ var fs = require("fs");
 
 router.put("/:id", (req, res) => {
   let userId = req.body.userPut.id;
-  console.log("Put request below______");
-  console.log(req.body.userPut);
 
   fs.readFile("Users.json", (err, data) => {
     if (err) throw err;
     var users = JSON.parse(data);
 
-    var loggedInUserData = users.find((u) => u.id == userId);
+    var userFromDB = users.find((u) => u.id == userId);
 
-    loggedInUserData.newsletter = req.body.userPut.newsletter;
+    userFromDB.newsletter = req.body.userPut.newsletter;
 
-    let usersToSave = JSON.stringify(users, null, 2);
+    let updateUser = JSON.stringify(users, null, 2);
 
-    fs.writeFile("./Users.json", usersToSave, (err) => {
+    fs.writeFile("./Users.json", updateUser, (err) => {
       if (err) throw err;
     });
 
-    res.send("Newsletter changed!!");
+    res.send("Newsletter Updated!");
   });
 });
 
