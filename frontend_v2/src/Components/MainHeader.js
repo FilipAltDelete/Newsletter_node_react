@@ -89,12 +89,20 @@ export class MainHeader extends Component {
       color: "#fff",
       textAlign: "left",
     };
+
     const buttonStyle = {
       width: "100px",
     };
+
     const registerButtonStyle = {
       width: "100px",
       float: "right",
+    };
+    const left = {
+      float: "left",
+    };
+    const right = {
+      float: "lright",
     };
 
     if (this.state.isLoggedIn === false) {
@@ -102,32 +110,36 @@ export class MainHeader extends Component {
         <div>
           <header style={headerStyle}>
             <h1 style={textStyle}>Newsletter</h1>
-            <form onSubmit={this.handleSingIn} style={formStyle}>
-              Username{" "}
-              <input
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.handleChange}
-              ></input>{" "}
-              Password{" "}
-              <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              ></input>{" "}
-              <button
-                //onClick={this.childFunction.bind(this)}
-                style={buttonStyle}
-                type="submit"
-              >
-                Login
+            <div style={left}>
+              <form onSubmit={this.handleSingIn} style={formStyle}>
+                Username{" "}
+                <input
+                  type="text"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                ></input>{" "}
+                Password{" "}
+                <input
+                  type="password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                ></input>{" "}
+                <button
+                  //onClick={this.childFunction.bind(this)}
+                  //style={buttonStyle}
+                  type="submit"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+            <div syle={right}>
+              <button onClick={this.handleRegister} style={registerButtonStyle}>
+                Register
               </button>
-            </form>
-            <button onClick={this.handleRegister} style={registerButtonStyle}>
-              Register
-            </button>
+            </div>
           </header>
         </div>
       );
@@ -141,9 +153,6 @@ export class MainHeader extends Component {
                 Sign Out
               </button>
             </form>
-            <button onClick={this.handleRegister} style={registerButtonStyle}>
-              Register
-            </button>
           </header>
         </div>
       );
