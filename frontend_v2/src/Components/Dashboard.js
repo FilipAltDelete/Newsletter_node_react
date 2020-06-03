@@ -11,6 +11,7 @@ export class Dashboard extends Component {
       password: "",
       password_confirmation: "",
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -59,6 +60,7 @@ export class Dashboard extends Component {
           },
         }
       );
+      window.location.reload(false);
     };
 
     var hasNews;

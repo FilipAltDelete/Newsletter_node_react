@@ -4,6 +4,7 @@ import axios from "axios";
 export class MainHeader extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       id: "",
       username: "",

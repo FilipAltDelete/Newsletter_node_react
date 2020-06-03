@@ -11,13 +11,6 @@ var updateUserRouter = require("./routes/UpdateUser");
 
 var app = express();
 
-var admin = [
-  {
-    username: "test",
-    password: "1234",
-  },
-];
-
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
