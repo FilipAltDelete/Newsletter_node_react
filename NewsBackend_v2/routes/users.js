@@ -11,6 +11,7 @@ router.post("/", function (req, res) {
   fs.readFile("Users.json", (err, data) => {
     if (err) throw err;
     var users = JSON.parse(data);
+
     users.forEach((userFromFile) => {
       if (user === userFromFile.username) {
         bcrypt.compare(req.body.user.password, userFromFile.password, function (

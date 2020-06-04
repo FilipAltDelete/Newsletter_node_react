@@ -60,18 +60,31 @@ export class Dashboard extends Component {
           },
         }
       );
-      window.location.reload(false);
+
+      var currentLocal = JSON.parse(
+        localStorage.getItem("currentLoggedInUser")
+      );
+
+      if (currentLocal.newsletter !== "true") {
+        currentLocal.newsletter = "true";
+      } else {
+        currentLocal.newsletter = "false";
+      }
+      localStorage.setItem("currentLoggedInUser", JSON.stringify(currentLocal));
+
+      window.location.reload("false");
     };
 
     var hasNews;
     var subscribeButtonValue;
     if (this.props.userNewsletter) {
-      hasNews = "You subscribe to our newsletter!";
-      subscribeButtonValue = "Unsubscribe";
+      hasNews = "YAY! You subscribe to our newsletter!";
+      subscribeButtonValue = "Dont you fucking unsubscribe!!!!";
     } else {
-      hasNews = "You dont subscribe to our news letter!";
-      subscribeButtonValue = "Subscribe";
+      hasNews = "OMFG!? You dont subscribe to our news letter!";
+      subscribeButtonValue = "Subscribe fuck face!!";
     }
+
     if (this.props.registerNewUser === true) {
       const formStyle = {
         color: "#282c34",
@@ -139,8 +152,8 @@ export class Dashboard extends Component {
         </div>
       );
     } else if (
-      this.props.userLogedIn === true ||
-      (this.props.userLoggedIn === true && this.props.registerNewUser === true)
+      this.props.userLogedIn === true // ||
+      //(this.props.userLoggedIn === true && this.props.registerNewUser === true)
     ) {
       return (
         <div>

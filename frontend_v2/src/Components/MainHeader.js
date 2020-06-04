@@ -5,13 +5,25 @@ export class MainHeader extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      id: "",
-      username: "",
-      password: "",
-      newsletter: false,
-      isLoggedIn: false,
-    };
+    var logedInUser = JSON.parse(localStorage.getItem("currentLoggedInUser"));
+
+    if (logedInUser !== null) {
+      this.state = {
+        id: logedInUser.id,
+        username: logedInUser.username,
+        newsletter: logedInUser.newsletter,
+        isLoggedIn: true,
+      };
+    } else {
+      this.state = {
+        id: "",
+        username: "",
+        password: "",
+        newsletter: false,
+        isLoggedIn: false,
+      };
+    }
+
     this.handleSingIn = this.handleSingIn.bind(this);
     this.handleSingOut = this.handleSingOut.bind(this);
     this.handleChange = this.handleChange.bind(this);

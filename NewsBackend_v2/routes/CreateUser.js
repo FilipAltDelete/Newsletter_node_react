@@ -19,6 +19,7 @@ app.post("/", function (request, response) {
 
   if (newPassword === password_confirmation) {
     console.log("Password Match!!");
+
     bcrypt.hash(newPassword, salt, (err, encrypted) => {
       newPassword = encrypted;
       fs.readFile("Users.json", (err, data) => {

@@ -6,13 +6,34 @@ export class MainPage extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isLogedIn: false,
-      userId: "",
-      newsletter: "",
-      logedInUsername: "",
-      registerNew: false,
-    };
+    var logedInUser = JSON.parse(localStorage.getItem("currentLoggedInUser"));
+    console.log(logedInUser);
+
+    if (logedInUser !== null) {
+      if (logedInUser.newsletter === "true") {
+        this.state = {
+          isLogedIn: true,
+          userId: logedInUser.id,
+          newsletter: true,
+          logedInUsername: logedInUser.username,
+        };
+      } else {
+        this.state = {
+          isLogedIn: true,
+          userId: logedInUser.id,
+          newsletter: false,
+          logedInUsername: logedInUser.username,
+        };
+      }
+    } else {
+      this.state = {
+        isLogedIn: false,
+        userId: "",
+        newsletter: "",
+        logedInUsername: "",
+        registerNew: false,
+      };
+    }
   }
   parentRegisterUser = (register) => {
     this.setState({
