@@ -4,7 +4,7 @@
     "username": "test",
     "password": "$2b$10$YrQsIqLHVpBLPsVvIUoO7.6SAusRBBr0aUNwDTow4ZSdlhNq6YsU6",
     "email": "test@test.com",
-    "newsletter": true
+    "newsletter": false
   },
   {
     "id": 2,

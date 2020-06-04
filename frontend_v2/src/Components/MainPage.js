@@ -6,6 +6,7 @@ export class MainPage extends Component {
   constructor(props) {
     super(props);
 
+    /*
     var logedInUser = JSON.parse(localStorage.getItem("currentLoggedInUser"));
     console.log(logedInUser);
 
@@ -34,6 +35,15 @@ export class MainPage extends Component {
         registerNew: false,
       };
     }
+    */
+
+    this.state = {
+      isLogedIn: false,
+      userId: "",
+      newsletter: "",
+      logedInUsername: "",
+      registerNew: false,
+    };
   }
   parentRegisterUser = (register) => {
     this.setState({
